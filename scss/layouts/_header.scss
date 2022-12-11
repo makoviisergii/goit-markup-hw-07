@@ -1,0 +1,137 @@
+.main-nav {
+    border-top: 1px solid #ECECEC;
+    ;
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.logo-head {
+    color: var(--accent-text-color);
+
+}
+
+.logo {
+
+    color: #000000;
+
+    font-family: Raleway, cursive;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.site-nav {
+    display: flex;
+    margin-left: 95px;
+}
+
+
+
+.nav-item+.nav-item {
+    margin-left: 50px;
+}
+
+
+.site-nav .link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--title-text-color);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition-property: color, fill, background-color, border-color, box-shadow;
+    transition: var(--timing-function);
+
+
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+    color: var(--accent-text-color);
+}
+
+.site-nav .link.carent {
+    color: var(--accent-text-color);
+
+}
+
+
+.site-nav .link::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    background: #2196F3;
+    border-radius: 2px;
+    opacity: 0;
+
+}
+
+.site-nav .link.carent::after {
+    opacity: 1;
+}
+
+
+header .contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.contact-item+.contact-item {
+    margin-left: 50px;
+}
+
+.contact-item.email {
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-link {
+    color: var(--primary-text-color);
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    fill: #757575;
+
+
+    transition-property: color, fill, background-color, border-color, box-shadow;
+    transition: var(--timing-function);
+
+}
+
+.contact-link-text {
+    display: block;
+
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--accent-text-color);
+    fill: var(--accent-text-color);
+
+}
+
+
+
