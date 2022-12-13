@@ -1,44 +1,34 @@
-.main-nav {
-    border-top: 1px solid #ECECEC;
-    ;
-    display: flex;
-    align-items: center;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-}
-
-.logo-heading {
-    color: var(--accent-text-color);
-
+.container__main-nav {
+  border-top: 1px solid #ececec;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
+  color: #000000;
 
-    color: #000000;
+  font-family: Raleway, cursive;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
 
-    font-family: Raleway, cursive;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
+  &-heading {
+    color: var(--accent-text-color);
+  }
 }
 
-.site-nav {
+.main-nav {
+  display: flex;
+  align-items: center;
+  &__list {
     display: flex;
     margin-left: 95px;
-}
-
-
-
-.nav-item+.nav-item {
+  }
+  &__item + &__item {
     margin-left: 50px;
-}
-
-
-.site-nav .link {
+  }
+  &__link {
     position: relative;
     display: block;
     padding-top: 32px;
@@ -51,57 +41,46 @@
 
     transition-property: color, fill, background-color, border-color, box-shadow;
     transition: var(--timing-function);
+    &:hover, &:focus {
+        color: var(--accent-text-color);
 
-
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
-    color: var(--accent-text-color);
-}
-
-.site-nav .link.carent {
-    color: var(--accent-text-color);
-
-}
-
-
-.site-nav .link::after {
-    content: "";
+    }
+    &::after {
+content: "";
     position: absolute;
     display: block;
     width: 100%;
     height: 4px;
     left: 0;
     bottom: -1px;
-    background: #2196F3;
+    background: #2196f3;
     border-radius: 2px;
     opacity: 0;
+    }
+  }
 
 }
 
-.site-nav .link.carent::after {
+.carent__nav-link {
+  color: var(--accent-text-color);
+  &::after {
     opacity: 1;
+  }
 }
 
-
-header .contacts {
-    display: flex;
-    margin-left: auto;
-}
-
-.contact-item+.contact-item {
+.contacts {
+  display: flex;
+  margin-left: auto;
+    &__item + &__item {
     margin-left: 50px;
-}
-
-.contact-item.email {
+  }
+  &__item {
     height: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.contact-link {
+  }
+  &__link {
     color: var(--primary-text-color);
 
     font-style: normal;
@@ -115,23 +94,17 @@ header .contacts {
     gap: 10px;
     fill: #757575;
 
-
     transition-property: color, fill, background-color, border-color, box-shadow;
     transition: var(--timing-function);
 
-}
-
-.contact-link-text {
-    display: block;
-
-}
-
-.contact-link:hover,
-.contact-link:focus {
+    &:hover, &:focus {
     color: var(--accent-text-color);
     fill: var(--accent-text-color);
-
+    }
+    
 }
 
-
-
+&__text {
+    display: block;
+}
+}

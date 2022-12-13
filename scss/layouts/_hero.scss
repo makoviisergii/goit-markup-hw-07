@@ -7,28 +7,27 @@
     background-position: center;
     /* background-color: #2F303A; */
     text-align: center;
-
-}
-
-.hero-title {
+    &__title {
     color: var(--secondary-text-color);
+    
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 695px;
+    
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
 
-    margin: 0 auto;
-    margin-bottom: 30px;
-    max-width: 695px;
+    
 
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
 }
-
-
 
 /*hero button */
 
-.hero .button {
+.button {
 
     color: var(--secondary-text-color);
     background-color: var(--accent-text-color);
@@ -50,13 +49,11 @@
     transition-property: color, fill, background-color, border-color;
     transition: var(--timing-function);
 
-}
-
-.hero .button:hover,
-.hero .button:focus {
+    &:hover, &:focus {
     color: var(--title-text-color);
     background-color: var(--primery-bg-color);
     border-color: var(--primery-bg-color);
     cursor: pointer;
+    }
 
 }

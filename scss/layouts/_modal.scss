@@ -1,38 +1,35 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 
-    transition-property: visibility, opacity;
-    transition: var(--timing-function);
+  transition-property: visibility, opacity;
+  transition: var(--timing-function);
 
-}
-
-.backdrop.is-hidden {
+  &.is-hidden {
     opacity: 0;
     pointer-events: none;
+  }
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    min-width: 528px;
-    min-height: 581px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+  min-width: 528px;
+  min-height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-    padding: 40px;
-
-}
-
-.bn-close {
+  padding: 40px;
+  &__bn-close {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -46,28 +43,22 @@
 
     box-sizing: border-box;
 
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     fill: #000000;
-
-}
-
-
-
-.icon-close {
+    &:hover,
+    &:focus {
+      fill: var(--accent-text-color);
+      transition-property: fill;
+      transition: var(--timing-function);
+    }
+  }
+  &__icon-close {
     display: block;
+  }
 
-
-}
-
-.bn-close:hover .icon-close {
-    fill: var(--accent-text-color);
-    transition-property: fill;
-    transition: var(--timing-function);
-}
-
-.form-title {
+  &__title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 20px;
@@ -76,34 +67,26 @@
 
     display: block;
     padding-bottom: 12px;
-}
-
-.modal-label {
+  }
+  &__label {
     display: block;
-}
+    span {
+      font-weight: 400;
+      font-size: 12px;
 
+      letter-spacing: 0.01em;
+      color: var(--primary-text-color);
 
-.modal-label span {
-
-    font-weight: 400;
-    font-size: 12px;
-
-    letter-spacing: 0.01em;
-    color: var(--primary-text-color);
-
-    margin-bottom: 5px;
-}
-
-.modal-wrap {
-
+      margin-bottom: 5px;
+    }
+  }
+  &__wrap {
     position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-}
-
-.modal-input {
-
+  }
+  &__input {
     width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -111,22 +94,22 @@
     transition-property: border;
     transition: var(--timing-function);
     outline: none;
-
-}
-
-.modal-ikon {
-
+    .modal__label:hover &,
+    .modal__label:focus & {
+      border: 1px solid var(--accent-text-color);
+      cursor: pointer;
+    }
+  }
+  &__icon {
     position: absolute;
     left: 12px;
     fill: #000000;
-}
 
-.modal-label:hover .modal-ikon {
-    fill: var(--accent-text-color);
-}
-
-.modal-area {
-
+    .modal__label:hover & {
+      fill: var(--accent-text-color);
+    }
+  }
+  &__area {
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.01em;
@@ -134,75 +117,52 @@
     color: rgba(117, 117, 117, 0.5);
     padding: 12px 16px;
 
-
     height: 120px;
     resize: none;
 
     margin-bottom: 20px;
-}
-
-.modal-area::placeholder {
-
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
-
-.modal-box-bn {
+    &::placeholder {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+  &__box-bn {
     display: flex;
     justify-content: center;
     padding-top: 20px;
+  }
+  &__button {
+      display: block;
 
-}
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.88;
+      letter-spacing: 0.06em;
 
-.modal-button {
-    display: block;
+      width: 200px;
+      height: 50px;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+      color: var(--secondary-text-color);
+      background-color: #2196f3;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
 
-    width: 200px;
-    height: 50px;
+      transition-property: background-color;
+      transition: var(--timing-function);
 
-    color: var(--secondary-text-color);
-    background-color: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-
-    transition-property: background-color;
-    transition: var(--timing-function);
-
-}
-
-.agreed-link {
-    font-weight: 400;
-    font-size: 14px;
-    text-decoration-line: underline;
-
-    color: var(--accent-text-color);
-}
-
-.modal-label:hover .modal-input,
-.modal-label:focus .modal-input {
-    border: 1px solid var(--accent-text-color);
-    cursor: pointer;
-}
-
-
-.form-check-field {
-
+      &:hover {
+            background-color: #188ce8;
+         }
+    }
+&__check-field {
     margin-left: 12px;
     display: flex;
     align-items: center;
 }
-
-
-.form-check {
-
+&__check {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -215,42 +175,35 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+&__checkbox-icon {
+    display: none;
+  
+    .modal__check:checked+.modal__checkbox & {
+      display: block;
+    }
+}
 
-.form-checkbox {
+&__checkbox {
     border-radius: 2px;
     cursor: pointer;
     margin-right: 7px;
     border: 2px solid var(--title-text-color);
+    .modal__check:checked+& {
+            background-color: var(--accent-text-color);
+            border-color: var(--accent-text-color);
+        }
 }
-
-.form-checkbox-icon {
-    display: none;
-}
-
-.form-check:checked+.form-checkbox {
-    background-color: var(--accent-text-color);
-    border-color: var(--accent-text-color);
-}
-
-.form-check:checked+.form-checkbox .form-checkbox-icon {
-    display: block;
-
-}
-
-.form-field-link {
+&__field-link {
     font-weight: 400;
     line-height: 1.71;
     text-decoration-line: underline;
-    color: #2196F3;
+    color: #2196f3;
 }
-
-.modal-button:hover {
-    background-color: #188CE8;
 
 }
 
 #phone,
 #email,
 #first-name {
-    padding-left: 42px;
+  padding-left: 42px;
 }
