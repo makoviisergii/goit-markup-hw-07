@@ -649,31 +649,6 @@ footer {
   border-bottom: 1px solid #EEEEEE;
 }
 
-.project__image::after {
-  content: "Технокрик це майданчик розростання коронавірусу. Компанія використовує цю платформу для цифрового шпигунства та атак на захищені ресурси конкурентів";
-  position: absolute;
-  display: block;
-  transform: translateY(100%);
-  transition: transform var(--timing-function);
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 63px 24px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5555555556;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
-  background: rgba(33, 150, 243, 0.9);
-  transition-property: color, fill, background-color, border-color, box-shadow;
-  transition: var(--timing-function);
-}
-
-.project-link:hover .project__image::after,
-.project-link:focus .project__image::after {
-  transform: translateY(0%);
-}
-
 .backdrop {
   position: fixed;
   top: 0;
